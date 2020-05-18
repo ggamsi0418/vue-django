@@ -1,0 +1,1 @@
+# vue와 django를 활용한 blog 앱 만들기 (복습)

@@ -1,3 +1,5 @@
+const FileManagerPlugin = require("filemanager-webpack-plugin-fixed");
+
 module.exports = {
   transpileDependencies: ["vuetify"],
 
@@ -6,9 +8,9 @@ module.exports = {
     index: "home.html",
   },
 
-  // outputDir: "dist",
-  // publicPath: "/",
-  // assetsDir: "static",
+  outputDir: "dist",
+  publicPath: "/",
+  assetsDir: "static",
 
   pages: {
     home: {
@@ -32,5 +34,36 @@ module.exports = {
       title: "WpackMultiThree/post_detail.html",
       minify: false,
     },
+  },
+
+  configureWebpack: {
+    plugins: [
+      new FileManagerPlugin({
+        onStart: {
+          delete: ["../back/static/**/", "../back/templates/**/"],
+        },
+
+        onEnd: {
+          copy: [
+            {
+              source: "dist/static",
+              destination: "../back/static/",
+            },
+            {
+              source: "dist/favicon.ico",
+              destination: "../back/static/img/",
+            },
+            {
+              source: "dist/home.html",
+              destination: "../back/templates/",
+            },
+            {
+              source: "dist/post*.html",
+              destination: "../back/templates/blog/",
+            },
+          ],
+        },
+      }),
+    ],
   },
 };

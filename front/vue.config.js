@@ -44,8 +44,7 @@ module.exports = {
         },
 
         onEnd: {
-          copy: [
-            {
+          copy: [{
               source: "dist/static",
               destination: "../back/static/",
             },

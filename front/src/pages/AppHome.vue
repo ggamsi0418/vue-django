@@ -1,60 +1,31 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release (home.html) </span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
+  <v-app id="inspire">
+    <MainMenu></MainMenu>
 
     <v-content>
-      <HelloWorld/>
+      <Home></Home>
     </v-content>
+
+    <v-footer app dark>
+      <span>&copy; 2020</span>
+    </v-footer>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from '../components/HelloWorld';
+  import MainMenu from '../components/MainMenu.vue';
+  import Home from '../components/Home.vue';
 
-export default {
-  name: 'AppHome',
 
-  components: {
-    HelloWorld,
-  },
+  export default {
+    components: {MainMenu, Home},
 
-  data: () => ({
-    //
-  }),
-};
+    data: () => ({
+
+    }),
+
+    created () {
+      this.$vuetify.theme.dark = false
+    },
+  }
 </script>

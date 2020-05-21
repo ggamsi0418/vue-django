@@ -1,6 +1,13 @@
 <template>
-    <v-container>
-        <h1>현재 페이지는 home.html입니다.</h1>
+    <v-container
+        class="d-flex flex-column fill-height justify-center align-center"
+    >
+        <div>
+            <h1 class='font-weight-black display-4'>JB's Blog</h1>
+        </div>
+        <div class="ma-5">
+            <h2 class='font-weight-black display-1'>by vue-django</h2>
+        </div>
     </v-container>
 </template>
 
@@ -9,7 +16,3 @@
         
     }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

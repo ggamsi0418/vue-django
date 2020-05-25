@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 추가
     'blog.apps.BlogConfig',
+    'api.apps.ApiConfig',
+    
     'taggit',
 ]
 

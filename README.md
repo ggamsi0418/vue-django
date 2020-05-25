@@ -11,3 +11,6 @@ https://www.evernote.com/l/AlPpiRrpuB5HVpL1qM36v2BpI-MLDVhf1aU/
 
 #### [Review 04] Main 페이지(home.html) 만들기
 https://www.evernote.com/l/AlO3GUzS1CdGp7uY3mq47Msf8bz7lhsRqAc/
+
+#### [Review 05] List 페이지(post_list.html) 만들기 (1)
+https://www.evernote.com/l/AlMMAh5fMZBP6JagRV-Sl7dNZ_cWnOe2vAw/

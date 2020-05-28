@@ -4,7 +4,7 @@ module.exports = {
   transpileDependencies: ["vuetify"],
 
   devServer: {
-    proxy: "http://192.168.1.50:8000", // xhr only
+    proxy: "http://192.168.0.64:8000", // xhr only
     index: "home.html",
   },
 
@@ -44,7 +44,8 @@ module.exports = {
         },
 
         onEnd: {
-          copy: [{
+          copy: [
+            {
               source: "dist/static",
               destination: "../back/static/",
             },
